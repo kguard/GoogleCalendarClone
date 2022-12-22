@@ -1,8 +1,12 @@
 <resources>
     <string name="app_name">GoogleCalendarClone</string>
+    <string name="calendar">Calendar</string>
     <string name="schedule">일정</string>
     <string name="day">일</string>
     <string name="three_days">3일</string>
     <string name="week">주</string>
     <string name="month">월</string>
+    <string name="search">찾기</string>
+    <string name="today">오늘</string>
+    <string name="profile">프로필</string>
 </resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="average" >
+        <item name="android:fontFamily">@font/average_regular</item>
+    </style>
+    <style name="notosanskr" >
+        <item name="android:fontFamily">@font/notosanskr_regular</item>
+    </style>
+    <style name="nunito" >
+        <item name="android:fontFamily">@font/nunito_regular</item>
+    </style>
+    <style name="roboto" >
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="toolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/main_color</item>
+        <item name="navigationIcon">"@drawable/ic_menu"</item>
+        <item name="menu">@menu/toolbar_menu</item>
+    </style>
+</resources>

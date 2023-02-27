@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
 <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/toolbar"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:theme="@style/toolbar" />
+    app:menu="@menu/toolbar_menu"
+    app:navigationIcon="@drawable/ic_menu"
+    android:background="@color/main_color">
+    <LinearLayout
+        android:id="@+id/title_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/average_regular"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/calendar"
+            android:textColor="@color/main_text_color"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:id="@+id/title_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_arrow_down"/>
+    </LinearLayout>
+</androidx.appcompat.widget.Toolbar>
+</layout>

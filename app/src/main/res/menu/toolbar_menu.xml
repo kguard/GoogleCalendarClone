@@ -3,19 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/search"
+        android:id="@+id/menu_search"
         android:title="@string/search"
         android:icon="@drawable/ic_search"
         android:enabled="true"
         app:showAsAction="ifRoom"/>
     <item
-        android:id="@+id/today"
+        android:id="@+id/menu_today"
         android:title="@string/today"
         android:icon="@drawable/ic_today"
         android:enabled="true"
         app:showAsAction="always"/>
     <item
-        android:id="@+id/profile"
+        android:id="@+id/menu_profile"
         android:title="@string/profile"
         android:icon="@drawable/ic_account_circle"
         android:enabled="true"

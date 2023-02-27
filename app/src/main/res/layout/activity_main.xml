@@ -1,28 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
     <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/secondary_color"
         tools:context=".MainActivity"
-        tools:openDrawer="start"
-        android:id="@+id/drawer_layout">
+        tools:openDrawer="start">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-
-            <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/toolbar"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
                 android:layout_width="0dp"
+                android:elevation="5dp"
                 android:layout_height="wrap_content"
-                android:theme="@style/toolbar"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent">
+
+                <include
+                    android:id="@+id/main_toolbar"
+                    layout="@layout/toolbar"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/main_color"
+                android:elevation="1dp"
+                android:visibility="gone"
+
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+                app:mcv_dateTextAppearance="@style/CalendarDateAppearance"
+                app:mcv_firstDayOfWeek="monday"
+                app:mcv_showOtherDates="defaults" />
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigation_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/main_color"
+            android:fitsSystemWindows="true"
+            android:textSize="30sp"
+            android:visibility="gone"
+            app:headerLayout="@layout/navi_header"
+            app:itemIconPadding="24dp"
+            app:itemIconSize="24dp"
+            app:itemVerticalPadding="8dp"
+            app:menu="@menu/drawer_menu" />
     </androidx.drawerlayout.widget.DrawerLayout>
 </layout>

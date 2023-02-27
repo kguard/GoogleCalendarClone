@@ -18,4 +18,11 @@
         <item name="navigationIcon">"@drawable/ic_menu"</item>
         <item name="menu">@menu/toolbar_menu</item>
     </style>
+
+    <style name="CalendarDateAppearance">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@drawable/calendar_date_color</item>
+    </style>
+
+
 </resources>

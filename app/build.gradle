@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -45,6 +46,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
 
     implementation 'androidx.drawerlayout:drawerlayout:1.1.1'
+    implementation 'com.github.prolificinteractive:material-calendarview:2.0.1'
 
 
 }
